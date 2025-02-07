@@ -3,20 +3,8 @@ const menuButton = document.getElementById('menuButton');
 const navItems = document.getElementById('navItems');
 
 menuButton.addEventListener('click', () => {
-    navItems.classList.toggle('hide');
+    navItems.classList.toggle('show');
 });
-
-// Handle window resize to display menu on large screens
-function handleResize() {
-    if (window.innerWidth > 1000) {
-        navItems.classList.remove('hide');
-    } else {
-        navItems.classList.add('hide');
-    }
-}
-
-window.addEventListener('resize', handleResize);
-window.addEventListener('load', handleResize);
 
 // Image viewer modal
 function viewerTemplate(imagePath, altText) {
@@ -35,7 +23,7 @@ function viewHandler(event) {
         const modalContainer = document.getElementById('modalContainer');
         modalContainer.innerHTML = viewerTemplate(src, clickedElement.alt);
         modalContainer.style.display = 'flex';
-
+        
         // Add close button functionality
         document.querySelector('.close-viewer').addEventListener('click', closeViewer);
     }
