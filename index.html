@@ -3,30 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cool Pics - Part 2</title>
+    <title>Cool Pics</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <button id="menuButton">Menu</button>
-        <nav>
-            <ul id="navItems" class="hide">
+        <button id="menuButton">☰</button>
+        <nav id="navItems" class="hide">
+            <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Gallery</a></li>
-                <li><a href="#">About</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="gallery">
-        <img src="image1.jpg" alt="Cool Image 1">
-        <img src="image2.jpg" alt="Cool Image 2">
-        <img src="image3.jpg" alt="Cool Image 3">
-    </section>
+    <main>
+        <section class="gallery">
+            <img src="image1.jpg" alt="Image 1">
+            <img src="image2.jpg" alt="Image 2">
+            <img src="image3.jpg" alt="Image 3">
+            <img src="image1.jpg" alt="Image 4">
+            <img src="image2.jpg" alt="Image 5">
+            <img src="image3.jpg" alt="Image 6">
+            <img src="image1.jpg" alt="Image 7">
+            <img src="image2.jpg" alt="Image 8">
+            <img src="image3.jpg" alt="Image 9">
+        </section>
+    </main>
 
-    <!-- Image viewer modal container -->
-    <div id="modalContainer"></div>
+    <div id="modalContainer" class="modal-container"></div>
 
     <script src="script.js"></script>
 </body>

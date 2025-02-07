@@ -34,6 +34,7 @@ function viewHandler(event) {
         const src = clickedElement.src;
         const modalContainer = document.getElementById('modalContainer');
         modalContainer.innerHTML = viewerTemplate(src, clickedElement.alt);
+        modalContainer.style.display = 'flex';
 
         // Add close button functionality
         document.querySelector('.close-viewer').addEventListener('click', closeViewer);
@@ -41,7 +42,9 @@ function viewHandler(event) {
 }
 
 function closeViewer() {
-    document.getElementById('modalContainer').innerHTML = '';
+    const modalContainer = document.getElementById('modalContainer');
+    modalContainer.innerHTML = '';
+    modalContainer.style.display = 'none';
 }
 
 // Attach event listener to gallery section
